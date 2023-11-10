@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Bmi {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
@@ -8,8 +10,10 @@ public class Bmi {
         double weight = stdIn.nextDouble();
 
         double bmi = weight / Math.pow(height, 2);
+        
+        String formattedBmi = String.format("%.2f", bmi);
 
         System.out.println("------------------------------");
-        System.out.println("BMIは" + bmi + "です。");
+        System.out.println("BMIは" + formattedBmi + "です。");
     }
 }
